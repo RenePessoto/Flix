@@ -1,3 +1,3 @@
 "# Flix" 
 
-realizando estudos atraves da criaçao de uma pagina que armazene atrves de uma lista os elementos filme e exiba-os com imagem e nome.
+realizando estudos atraves da criação de uma página que armazene através de uma lista os elementos filme e exíba-os com imagem e nome.
