@@ -1,4 +1,16 @@
-const movieList =[];
+const movieName = document.querySelector('#name').value;
+const movieURL = document.querySelector('#url').value;
+
+const movieList =[
+  {id:0,
+   Title:'Homem de Ferro 3',
+   Cover:'https://upload.wikimedia.org/wikipedia/pt/1/19/Iron_Man_3_poster.jpg'
+  },
+  {id:1,
+   Title:'Interstellar',
+   Cover:'http://www.magazine-hd.com/apps/wp/wp-content/uploads/2014/10/Interstellar-o-Poster.jpg'
+  }
+];
 
 const movie ={
     id:movieList.length,
@@ -6,16 +18,16 @@ const movie ={
     Cover:(movieURL)
 };
 
+
 var addButtonEl = document.querySelector('#add-movie');
 
 function addMovie(){
 
-  let movieName = document.getElementById('name').value;
-  let movieURL = document.getElementById('url').value;
+  
 
   if ((movieURL.endsWith(".jpg") || movieURL.endsWith(".png") || movieURL.endsWith(".jpeg"))&&(movieName!== null)) {
     
-    movieList.push(new movie);
+    movieList.push(movie);
     
     return movieList[movie];
   
@@ -24,7 +36,7 @@ function addMovie(){
 } 
 }
 
-addButtonEl.addEventListener('click',addMovie,cleanInput)
+addButtonEl.addEventListener('click',addMovie)
 
 function cleanInput(){
   return (
@@ -33,10 +45,17 @@ function cleanInput(){
 }
 
 function show(movieList) {
-  var screen = "<img src=" + movieURL + " alt = "+ movieName + ">" + "</br>"+ "<label>"+movieName+"</label>";
-  var show = document.getElementById("show");
-  show.innerHTML = show.innerHTML + screen;
-
   
+  let element ="";
+
+  for ( movie = 0; movie< movieList.length; movie++){
+    element +='<div class="movie-box">'
+    element +='<div id="show" class="show">'
+    element +='<img src="${movieUrl}" alt="${movieName}">'
+    element += '<label>"${movieName}"</label>'
+    element+='</div>'
+
+  }
+  document.write()
 }
 
